@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Forms/NestedMasterPages/NestOne.Master" AutoEventWireup="true" CodeBehind="NestTwo.master.cs" Inherits="Songhay.Web.WebFormsSample.Forms.NestedMasterPages.NestTwo" %>
+<asp:Content runat="server" ID="Content1" ContentPlaceHolderID="Head">
+<style type="text/css">
+    fieldset, input[type="text"]
+    {
+        border: 1px solid #000;
+    }
+    label
+    {
+        font-weight: bold;
+    }
+</style>
+</asp:Content>
+<asp:Content runat="server" ID="Content2" ContentPlaceHolderID="Nest1">
+    <h2>Heading in Nested Master Page</h2>
+    <asp:Label runat="server" ID="NestedMasterPageLabel" Text="Nested Master Page Label" />
+    <asp:ContentPlaceHolder runat="server" ID="Nest2">
+    </asp:ContentPlaceHolder>
+</asp:Content>

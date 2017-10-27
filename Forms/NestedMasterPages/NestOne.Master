@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Forms/Default.Master" CodeBehind="NestOne.Master.cs" Inherits="Songhay.Web.WebFormsSample.Forms.NestedMasterPages.NestOne" %>
+
+<asp:Content runat="server" ID="HeadContent" ContentPlaceHolderID="Head">
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="Body">
+    <div class="NestedFlow">
+        <asp:ContentPlaceHolder runat="server" ID="Nest1">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>

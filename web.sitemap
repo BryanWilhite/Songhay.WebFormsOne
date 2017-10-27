@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Forms/Default.aspx" title="ASP.NET Web Forms Samples" description="Selected expressions of fundamentals and esoterics of ASP.NET Web Forms.">
+        <siteMapNode url="~/Forms/FormView.aspx" title="ASP.NET FormView" description="The standard ASP.NET FormView control with default paging over ObjectDataSource." />
+        <siteMapNode url="~/Forms/GridView.aspx" title="ASP.NET GridView" description="The standard ASP.NET GridView control with default paging over ObjectDataSource." />
+        <siteMapNode url="~/Forms/ListView.aspx" title="ASP.NET ListView" description="The standard ASP.NET ListView control with DataPager over ObjectDataSource." />
+        <siteMapNode url="~/Forms/MultiView.aspx" title="ASP.NET MultiView" description="The standard ASP.NET MultiView control." />
+        <siteMapNode url="~/Forms/Repeater.aspx" title="ASP.NET Repeater" description="The standard ASP.NET Repeater control with custom paging over ObjectDataSource." />
+        <siteMapNode url="~/Forms/ServerTransferOne.aspx" title="ASP.NET Server Transfer" description="Demonstrates the standard ASP.NET ServerTransfer() method." />
+        <siteMapNode url="~/Forms/WebParts.aspx" title="ASP.NET Web Parts" description="Demonstrates the basics of ASP.NET Web Parts." />
+        <siteMapNode url="~/Forms/Wizard.aspx" title="ASP.NET Wizard" description="Demonstrates the standard ASP.NET Wizard Control." />
+        <siteMapNode url="~/Forms/CrossPagePostBackOne.aspx" title="Cross-Page PostBack [1/2]" description="Demonstrates the standard ASP.NET Cross-Page PostBack.">
+            <siteMapNode url="~/Forms/CrossPagePostBackTwo.aspx" title="Cross-Page PostBack [2/2]" description="Demonstrates the standard ASP.NET Cross-Page PostBack." />
+        </siteMapNode>
+        <siteMapNode url="~/Forms/PartialPageUpdates.aspx" title="Partial Page Updates with ASP.NET AJAX" description="Demonstrates basic Partial Page updates with ScriptManager and UpdatePanel controls." />
+        <siteMapNode url="~/Forms/NestedMasterPages/Default.aspx" title="Nested Master Pages" description="Shows the Master.FindControl&lt;T&gt; extension method in action." />
+    </siteMapNode>
+</siteMap>

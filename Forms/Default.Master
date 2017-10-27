@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Songhay.Web.WebFormsSample.Forms.Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style type="text/css">
+        body > form > div
+        {
+            margin: 1em;
+            width: 800px;
+        }
+        h1
+        {
+            margin-bottom: 0;
+        }
+        .DownloadFlow
+        {
+            background-color: #ffff00;
+            font-size: small;
+            font-variant: small-caps;
+            padding: 0.5em;
+            text-align: right;
+        }
+        .SiteMap
+        {
+            font-size: small;
+            font-variant: small-caps;
+            letter-spacing: 0.25em;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title></title>
+</head>
+<body>
+    <form id="FormOne" runat="server">
+    <div>
+        <asp:SiteMapPath runat="server" ID="SiteMapPathOne" CssClass="SiteMap" />
+        <p class="DownloadFlow"><asp:HyperLink runat="server" NavigateUrl="~/Forms/Forms.zip" Text="Download Source Code" /></p>
+        <h1><asp:Literal runat="server" ID="TitleLiteral" Text="<%#Page.Title%>" /></h1>
+        <p><asp:Literal runat="server" ID="DesriptionLiteral" /></p>
+        <asp:SiteMapDataSource runat="server" ID="SiteMapDataSourceOne" StartingNodeUrl="~/Forms/Default.aspx" />
+        <asp:ContentPlaceHolder runat="server" ID="Body">
+        </asp:ContentPlaceHolder>
+        <p class="DownloadFlow"><asp:HyperLink runat="server" NavigateUrl="~/Forms/Forms.zip" Text="Download Source Code" /></p>
+        <p><asp:HyperLink runat="server" NavigateUrl="http://twitter.com/BryanWilhite" Text="@BryanWilhite" ToolTip="These samples are written by Bryan Wilhite!" /></p>
+    </div>
+    </form>
+</body>
+</html>

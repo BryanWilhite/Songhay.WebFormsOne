@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+    <system.webServer>
+        <staticContent>
+            <mimeMap fileExtension=".json" mimeType="application/json" />
+        </staticContent>
+    </system.webServer>
+    <system.web>
+        <customErrors defaultRedirect="Error.html" mode="On"/>
+    </system.web>
+    <system.serviceModel>
+        <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+        <bindings>
+            <customBinding>
+                <binding name="customHttpBinding">
+                    <binaryMessageEncoding />
+                    <httpTransport />
+                </binding>
+            </customBinding>
+        </bindings>
+        <services>
+            <service name="Songhay.Web.WebFormsSample.Services.WcfServiceOne" behaviorConfiguration="mexServiceBehavior">
+                <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+                <endpoint address="" binding="customBinding" bindingConfiguration="customHttpBinding" contract="Songhay.Web.WebFormsSample.Services.IWcfServiceOne" />
+                <endpoint address="json" behaviorConfiguration="ajaxBehavior" binding="webHttpBinding" contract="Songhay.Web.WebFormsSample.Services.IWcfServiceOne" />
+            </service>
+        </services>
+        <behaviors>
+            <serviceBehaviors>
+                <behavior name="mexServiceBehavior">
+                    <serviceMetadata httpGetEnabled="true" />
+                    <serviceDebug includeExceptionDetailInFaults="false" />
+                </behavior>
+            </serviceBehaviors>
+            <endpointBehaviors>
+                <behavior name="ajaxBehavior">
+                    <enableWebScript />
+                    <webHttp helpEnabled="true"/>
+                </behavior>
+            </endpointBehaviors>
+        </behaviors>
+    </system.serviceModel>
+</configuration>

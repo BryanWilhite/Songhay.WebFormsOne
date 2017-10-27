@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Songhay.Web.WebFormsSample.Services.WcfServiceOne" CodeBehind="WcfServiceOne.svc.cs" %>

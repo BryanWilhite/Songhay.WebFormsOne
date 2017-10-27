@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B8B98D4-A9F2-462E-BB7A-69D37EC5AC37}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Songhay.Web.WebFormsSample</RootNamespace>
+    <AssemblyName>Songhay.Web.WebFormsSample</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <JSLintSkip>\WebDesign\megafunk.com\scripts\|\WebDesign\javascript-build\</JSLintSkip>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ASPNETDB.MDF" />
+    <Content Include="App_Data\aspnetdb_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Customizations.sdf" />
+    <Content Include="Error.html" />
+    <Content Include="Forms\CrossPagePostBackOne.aspx" />
+    <Content Include="Forms\CrossPagePostBackTwo.aspx" />
+    <Content Include="Forms\FormView.aspx" />
+    <Content Include="Forms\GridView.aspx" />
+    <Content Include="Forms\ListView.aspx" />
+    <Content Include="Forms\MultiView.aspx" />
+    <Content Include="Forms\NestedMasterPages\Default.aspx" />
+    <Content Include="Forms\PartialPageUpdates.aspx" />
+    <Content Include="Forms\Repeater.aspx" />
+    <Content Include="Forms\ServerTransferOne.aspx" />
+    <Content Include="Forms\ServerTransferTwo.aspx" />
+    <Content Include="Forms\Default.aspx" />
+    <Content Include="Forms\WebParts.aspx" />
+    <Content Include="Forms\Wizard.aspx" />
+    <Content Include="Services\WcfServiceOne.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="App_Data\Web.ctt.config.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Forms\NestedMasterPages\NestOne.Master" />
+    <Content Include="Forms\NestedMasterPages\NestTwo.master" />
+    <Content Include="web.sitemap" />
+    <Content Include="Forms\Default.Master" />
+    <Content Include="Forms\Forms.zip" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\songhaywebformssample - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\songhaywebformssample - Web Deploy.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\CrossPagePostBackOne.aspx.cs">
+      <DependentUpon>CrossPagePostBackOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CrossPagePostBackOne.aspx.designer.cs">
+      <DependentUpon>CrossPagePostBackOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CrossPagePostBackTwo.aspx.cs">
+      <DependentUpon>CrossPagePostBackTwo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CrossPagePostBackTwo.aspx.designer.cs">
+      <DependentUpon>CrossPagePostBackTwo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormView.aspx.cs">
+      <DependentUpon>FormView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FormView.aspx.designer.cs">
+      <DependentUpon>FormView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GridView.aspx.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GridView.aspx.designer.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListView.aspx.cs">
+      <DependentUpon>ListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ListView.aspx.designer.cs">
+      <DependentUpon>ListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MultiView.aspx.cs">
+      <DependentUpon>MultiView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MultiView.aspx.designer.cs">
+      <DependentUpon>MultiView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NestedMasterPages\NestTwo.master.cs">
+      <DependentUpon>NestTwo.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\NestedMasterPages\NestTwo.master.designer.cs">
+      <DependentUpon>NestTwo.master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NestedMasterPages\NestOne.Master.cs">
+      <DependentUpon>NestOne.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\NestedMasterPages\NestOne.Master.designer.cs">
+      <DependentUpon>NestOne.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NestedMasterPages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\NestedMasterPages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PartialPageUpdates.aspx.cs">
+      <DependentUpon>PartialPageUpdates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PartialPageUpdates.aspx.designer.cs">
+      <DependentUpon>PartialPageUpdates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repeater.aspx.cs">
+      <DependentUpon>Repeater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Repeater.aspx.designer.cs">
+      <DependentUpon>Repeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerTransferOne.aspx.cs">
+      <DependentUpon>ServerTransferOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerTransferOne.aspx.designer.cs">
+      <DependentUpon>ServerTransferOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerTransferTwo.aspx.cs">
+      <DependentUpon>ServerTransferTwo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerTransferTwo.aspx.designer.cs">
+      <DependentUpon>ServerTransferTwo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WebParts.aspx.cs">
+      <DependentUpon>WebParts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WebParts.aspx.designer.cs">
+      <DependentUpon>WebParts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Wizard.aspx.cs">
+      <DependentUpon>Wizard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Wizard.aspx.designer.cs">
+      <DependentUpon>Wizard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GridOneData.cs" />
+    <Compile Include="Models\GridOneDatum.cs" />
+    <Compile Include="Models\ServiceOneDatum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IWcfServiceOne.cs" />
+    <Compile Include="Services\WcfServiceOne.svc.cs">
+      <DependentUpon>WcfServiceOne.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Index.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Songhay.Web.Controls\Songhay.Web.Controls.csproj">
+      <Project>{3F5256A7-AA91-418E-A1A7-E0A3D69E7376}</Project>
+      <Name>Songhay.Web.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60966</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
